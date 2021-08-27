@@ -1,0 +1,9 @@
+[submodule "Same-chat-api"]
+	path = Same-chat-api
+	url = https://github.com/luiscaro1/Same-chat-api
+[submodule "Same-authentication-api"]
+	path = Same-authentication-api
+	url = .https://github.com/luiscaro1/Same-authentication-api
+[submodule "Same-media-api"]
+	path = Same-media-api
+	url = https://github.com/luiscaro1/Same-media-api
