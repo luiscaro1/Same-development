@@ -5,8 +5,8 @@
 [submodule "Same-authentication-api"]
 	path = Same-authentication-api
 	url = git@github.com:luiscaro1/Same-authentication-api.git
-	branch=main
+	branch = main
 [submodule "Same-media-api"]
 	path = Same-media-api
 	url = git@github.com:luiscaro1/Same-media-api.git
-	branch=main
+	branch = main
