@@ -2,7 +2,11 @@
 
 ## Cloning Repo
 
-```git clone --recurse-submodule -j8 git@github.com:luiscaro1/Same-development.git```
+<br/>
+
+`git clone --recurse-submodule -j8 git@github.com:luiscaro1/Same-development.git`
+
+<br/>
 
 ## Pulling Submodule Changes
 
@@ -10,4 +14,18 @@
 
 In the project's root directory:
 
-```git submodule update --recursive --remote```
+<br/>
+
+`git submodule update --recursive --remote`
+
+<br/>
+
+## Running all containers together:
+
+<br/>
+
+### Development
+
+<br/>
+
+`docker compose -f docker-compose.dev.yml`
