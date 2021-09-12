@@ -28,4 +28,4 @@ In the project's root directory:
 
 <br/>
 
-`docker compose -f docker-compose.dev.yml`
+`docker compose -f docker-compose.dev.yml up`
