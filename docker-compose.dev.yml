@@ -21,3 +21,12 @@ services:
       - "./Same-chat-api:/app"
     ports:
       - "5001:5001"
+  media-api:
+    build:
+      dockerfile: dockerfile.dev
+      context: ./Same-media-api
+    restart: always
+    volumes:
+      - "./Same-media-api:/app"
+    ports:
+      - "5002:5002"
