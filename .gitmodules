@@ -14,3 +14,7 @@
 	path = Same-voice-api
 	url = git@github.com:luiscaro1/Same-voice-api.git
 	branch = master	
+[submodule "Same-client-ui"]
+	path = Same-voice-api
+	url = git@github.com:luiscaro1/Same-client-ui.git
+	branch = master	
