@@ -10,3 +10,7 @@
 	path = Same-media-api
 	url = git@github.com:luiscaro1/Same-media-api.git
 	branch = master
+[submodule "Same-voice-api"]
+	path = Same-voice-api
+	url = git@github.com:luiscaro1/Same-voice-api.git
+	branch = master	

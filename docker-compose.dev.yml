@@ -30,3 +30,12 @@ services:
       - "./Same-media-api:/app"
     ports:
       - "5002:5002"
+  voice-api:
+    build:
+      dockerfile: dockerfile.dev
+      context: ./Same-voice-api
+    restart: always
+    volumes:
+      - "./Same-voice-api:/app"
+    ports:
+      - "5003:5003"
