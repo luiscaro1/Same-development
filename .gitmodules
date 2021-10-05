@@ -18,3 +18,7 @@
 	path = Same-client-ui
 	url = git@github.com:luiscaro1/Same-client-ui.git
 	branch = master	
+[submodule "Same-game-api"]
+	path = Same-game-api
+	url = git@github.com:luiscaro1/Same-game-api.git
+	branch = master	
