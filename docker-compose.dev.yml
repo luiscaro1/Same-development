@@ -21,15 +21,15 @@ services:
   #     - "./Same-chat-api:/app"
   #   ports:
   #     - "5001:5001"
-  # media-api:
-  #   build:
-  #     dockerfile: dockerfile.dev
-  #     context: ./Same-media-api
-  #   restart: always
-  #   volumes:
-  #     - "./Same-media-api:/app"
-  #   ports:
-  #     - "5002:5002"
+  media-api:
+    build:
+      dockerfile: dockerfile.dev
+      context: ./Same-media-api
+    restart: always
+    volumes:
+      - "./Same-media-api:/app"
+    ports:
+      - "5002:5002"
   # voice-api:
   #   build:
   #     dockerfile: dockerfile.dev
@@ -45,9 +45,9 @@ services:
       context: ./Same-game-api
     restart: always
     volumes:
-      - './Same-game-api:/app'
+      - "./Same-game-api:/app"
     ports:
-      - '5004:5004'
+      - "5004:5004"
   client-ui:
     build:
       dockerfile: dockerfile.dev
@@ -57,4 +57,3 @@ services:
       - "./Same-client-ui:/app"
     ports:
       - "3000:3000"
-
