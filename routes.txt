@@ -1,0 +1,104 @@
+
+AUTH:
+
+baese_url: http://localhost:5000 
+
+
+---------------------
+
+CHAT:
+
+base_url: http://localhost:5001
+
+<POST> send message: /message
+    -body:{
+        lid,
+        uid,
+        type (TEXT or FILE),
+        content
+    }
+
+<POST> get all messages in a lobby: /messages
+    -body:{
+        pageNumber,
+        limit (how many items per page),
+        lid,
+    }
+
+MEDIA:
+
+base_url: http://localhost:5002
+
+<POST> upload media: /upload
+    -<form-data> body:{
+        files
+    }
+<GET> stream file: /{filename}
+    -body:none
+
+----------------------------------------
+Voice (not functional)
+
+
+http://localhost:5003
+
+----------------------------------------
+
+Game
+base_url: http://localhost:5004
+
+LFG: /lfg
+   <POST> create a lobby: /create
+        -body:{
+            uid,
+            gid,
+            description,
+            platform,
+            region,
+            mic,
+            rank
+        }
+   <DELETE> delete a lobby: /{id}
+  <GET> get lobby by game: /{id}
+  <POST> join lobby: /join
+        -body:{
+            lid,
+            gid,
+            uid
+        }
+  <GET> get lobby by user: /user/:id
+  <GET> get lobby by id: /lobby/:id
+
+Game: /game
+
+<POST> add a game: /add
+    -body:{
+        name,
+        platforms
+    }
+<GET> get all games: /all
+<GET> get game by id: /{id}
+
+Feed: /feed
+
+    <POST> make a post: /post
+            -body:{
+                uid,
+                gid,
+                text,
+                attachements
+            }
+    <DELETE> delete a post by id: /[id]
+     <GET> get a post by id: /[id]
+
+
+
+
+
+
+
+
+
+
+----------------------------------------
+http://localhost:3000

@@ -12,15 +12,15 @@ services:
       - "./Same-authentication-api:/app"
     ports:
       - "5000:5000"
-  # chat-api:
-  #   build:
-  #     dockerfile: dockerfile.dev
-  #     context: ./Same-chat-api
-  #   restart: always
-  #   volumes:
-  #     - "./Same-chat-api:/app"
-  #   ports:
-  #     - "5001:5001"
+  chat-api:
+    build:
+      dockerfile: dockerfile.dev
+      context: ./Same-chat-api
+    restart: always
+    volumes:
+      - "./Same-chat-api:/app"
+    ports:
+      - "5001:5001"
   media-api:
     build:
       dockerfile: dockerfile.dev

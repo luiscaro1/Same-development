@@ -5,5 +5,7 @@ exports.up = function (knex) {
 };
 
 exports.down = function (knex) {
-  return knex.schema.dropColumn("ulid");
+  return knex.schema.table("UserLobby", (table) => {
+    table.dropColumn("ulid");
+  });
 };
