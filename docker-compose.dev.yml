@@ -30,15 +30,15 @@ services:
       - "./Same-media-api:/app"
     ports:
       - "5002:5002"
-  # voice-api:
-  #   build:
-  #     dockerfile: dockerfile.dev
-  #     context: ./Same-voice-api
-  #   restart: always
-  #   volumes:
-  #     - "./Same-voice-api:/app"
-  #   ports:
-  #     - "5003:5003"
+  voice-api:
+    build:
+      dockerfile: dockerfile.dev
+      context: ./Same-voice-api
+    restart: always
+    volumes:
+      - "./Same-voice-api:/app"
+    ports:
+      - "5003:5003"
   game-api:
     build:
       dockerfile: dockerfile.dev
@@ -48,12 +48,23 @@ services:
       - "./Same-game-api:/app"
     ports:
       - "5004:5004"
-  client-ui:
-    build:
-      dockerfile: dockerfile.dev
-      context: ./Same-client-ui/
+  # client-ui:
+  #   build:
+  #     dockerfile: dockerfile.dev
+  #     context: ./Same-client-ui/
+  #   restart: always
+  #   volumes:
+  #     - "./Same-client-ui:/app"
+  #   ports:
+  #     - "3000:3000"
+  db:
+    image: postgres:alpine
     restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
     volumes:
-      - "./Same-client-ui:/app"
+      - ./dev_db/pgdata:/var/lib/postgresql/data
     ports:
-      - "3000:3000"
+      - "5432:5432"

@@ -2,5 +2,8 @@
   "dependencies": {
     "knex": "^0.95.11",
     "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.1"
   }
 }

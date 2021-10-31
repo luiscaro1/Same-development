@@ -22,8 +22,9 @@ module.exports = {
   },
 
   development: {
-    client: "postgresql",
+    client: "pg",
     connection: {
+      port: 5432,
       database: "postgres",
       user: "postgres",
       password: "postgres",
@@ -37,4 +38,3 @@ module.exports = {
     },
   },
 };
-
