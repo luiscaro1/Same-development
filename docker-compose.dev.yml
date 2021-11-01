@@ -48,15 +48,15 @@ services:
       - "./Same-game-api:/app"
     ports:
       - "5004:5004"
-  # client-ui:
-  #   build:
-  #     dockerfile: dockerfile.dev
-  #     context: ./Same-client-ui/
-  #   restart: always
-  #   volumes:
-  #     - "./Same-client-ui:/app"
-  #   ports:
-  #     - "3000:3000"
+  client-ui:
+    build:
+      dockerfile: dockerfile.dev
+      context: ./Same-client-ui/
+    restart: always
+    volumes:
+      - "./Same-client-ui:/app"
+    ports:
+      - "3000:3000"
   db:
     image: postgres:alpine
     restart: always
