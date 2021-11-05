@@ -11,7 +11,7 @@ services:
     volumes:
       - "./Same-authentication-api:/app"
     ports:
-      - "5000:5000"
+      - "8000:5000"
   chat-api:
     build:
       dockerfile: dockerfile.dev
