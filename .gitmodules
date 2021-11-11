@@ -5,20 +5,24 @@
 [submodule "Same-authentication-api"]
 	path = Same-authentication-api
 	url = git@github.com:luiscaro1/Same-authentication-api.git
-	branch = master
+	branch = main
 [submodule "Same-media-api"]
 	path = Same-media-api
 	url = git@github.com:luiscaro1/Same-media-api.git
-	branch = master
+	branch = main
 [submodule "Same-voice-api"]
 	path = Same-voice-api
 	url = git@github.com:luiscaro1/Same-voice-api.git
-	branch = master	
+	branch = main
 [submodule "Same-client-ui"]
 	path = Same-client-ui
 	url = git@github.com:luiscaro1/Same-client-ui.git
-	branch = master	
+	branch = main	
 [submodule "Same-game-api"]
 	path = Same-game-api
 	url = git@github.com:luiscaro1/Same-game-api.git
-	branch = master	
+	branch = main
+[submodule "Same-authentication-api-v2"]
+	path = Same-authentication-api-v2
+	url = git@github.com:luiscaro1/Same-authentication-api-v2.git
+	branch = main
