@@ -1,41 +1,49 @@
 version: "3"
 
 services:
+  # auth-api:
+  #   build:
+  #     context: ./Same-authentication-api
+  #   restart: always
+  #   environment:
+  #     FLASK_ENV: production
+  #   ports:
+  #     - "8000:5000"
   auth-api:
     build:
-      context: ./Same-authentication-api
+      context: ./Same-authentication-api-v2
     restart: always
     environment:
       FLASK_ENV: production
     ports:
       - "8000:5000"
-  chat-api:
-    build:
-      context: ./Same-chat-api
-    restart: always
-    ports:
-      - "5001:5001"
-  media-api:
-    build:
-      context: ./Same-media-api
-    restart: always
-    ports:
-      - "5002:5002"
-  voice-api:
-    build:
-      dockerfile: dockerfile.dev
-      context: ./Same-voice-api
-    restart: always
-    volumes:
-      - "./Same-voice-api:/app"
-    ports:
-      - "5003:5003"
-  game-api:
-    build:
-      context: ./Same-game-api
-    restart: always
-    ports:
-      - "5004:5004"
+  # chat-api:
+  #   build:
+  #     context: ./Same-chat-api
+  #   restart: always
+  #   ports:
+  #     - "5001:5001"
+  # media-api:
+  #   build:
+  #     context: ./Same-media-api
+  #   restart: always
+  #   ports:
+  #     - "5002:5002"
+  # voice-api:
+  #   build:
+  #     dockerfile: dockerfile.dev
+  #     context: ./Same-voice-api
+  #   restart: always
+  #   volumes:
+  #     - "./Same-voice-api:/app"
+  #   ports:
+  #     - "5003:5003"
+  # game-api:
+  #   build:
+  #     context: ./Same-game-api
+  #   restart: always
+  #   ports:
+  #     - "5004:5004"
   client-ui:
     build:
       context: ./Same-client-ui/
