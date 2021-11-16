@@ -1,17 +1,17 @@
 version: "3"
 
 services:
-  auth-api:
-    build:
-      dockerfile: dockerfile.dev
-      context: ./Same-authentication-api
-    restart: always
-    environment:
-      FLASK_ENV: development
-    volumes:
-      - "./Same-authentication-api:/app"
-    ports:
-      - "8000:5000"
+  # auth-api:
+  #   build:
+  #     dockerfile: dockerfile.dev
+  #     context: ./Same-authentication-api
+  #   restart: always
+  #   environment:
+  #     FLASK_ENV: development
+  #   volumes:
+  #     - "./Same-authentication-api:/app"
+  #   ports:
+  #     - "8000:5000"
 
   auth-api:
     build:
