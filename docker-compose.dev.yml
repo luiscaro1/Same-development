@@ -25,51 +25,51 @@ services:
     ports:
       - "8000:5000"
 
-  chat-api:
-    build:
-      dockerfile: dockerfile.dev
-      context: ./Same-chat-api
-    restart: always
-    volumes:
-      - "./Same-chat-api:/app"
-    ports:
-      - "5001:5001"
-  media-api:
-    build:
-      dockerfile: dockerfile.dev
-      context: ./Same-media-api
-    restart: always
-    volumes:
-      - "./Same-media-api:/app"
-    ports:
-      - "5002:5002"
-  voice-api:
-    build:
-      dockerfile: dockerfile.dev
-      context: ./Same-voice-api
-    restart: always
-    volumes:
-      - "./Same-voice-api:/app"
-    ports:
-      - "5003:5003"
-  game-api:
-    build:
-      dockerfile: dockerfile.dev
-      context: ./Same-game-api
-    restart: always
-    volumes:
-      - "./Same-game-api:/app"
-    ports:
-      - "5004:5004"
-  client-ui:
-    build:
-      dockerfile: dockerfile.dev
-      context: ./Same-client-ui/
-    restart: always
-    volumes:
-      - "./Same-client-ui:/app"
-    ports:
-      - "3000:3000"
+  # chat-api:
+  #   build:
+  #     dockerfile: dockerfile.dev
+  #     context: ./Same-chat-api
+  #   restart: always
+  #   volumes:
+  #     - "./Same-chat-api:/app"
+  #   ports:
+  #     - "5001:5001"
+  # media-api:
+  #   build:
+  #     dockerfile: dockerfile.dev
+  #     context: ./Same-media-api
+  #   restart: always
+  #   volumes:
+  #     - "./Same-media-api:/app"
+  #   ports:
+  #     - "5002:5002"
+  # voice-api:
+  #   build:
+  #     dockerfile: dockerfile.dev
+  #     context: ./Same-voice-api
+  #   restart: always
+  #   volumes:
+  #     - "./Same-voice-api:/app"
+  #   ports:
+  #     - "5003:5003"
+  # game-api:
+  #   build:
+  #     dockerfile: dockerfile.dev
+  #     context: ./Same-game-api
+  #   restart: always
+  #   volumes:
+  #     - "./Same-game-api:/app"
+  #   ports:
+  #     - "5004:5004"
+  # client-ui:
+  #   build:
+  #     dockerfile: dockerfile.dev
+  #     context: ./Same-client-ui/
+  #   restart: always
+  #   volumes:
+  #     - "./Same-client-ui:/app"
+  #   ports:
+  #     - "3000:3000"
   db:
     image: postgres:alpine
     restart: always
