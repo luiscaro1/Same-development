@@ -13,17 +13,17 @@ services:
     ports:
       - "8000:5000"
 
-  auth-api:
-    build:
-      dockerfile: dockerfile.dev
-      context: ./Same-authentication-api-v2
-    restart: always
-    environment:
-      FLASK_ENV: development
-    volumes:
-      - "./Same-authentication-api-v2:/app"
-    ports:
-      - "8000:5000"
+  # auth-api:
+  #   build:
+  #     dockerfile: dockerfile.dev
+  #     context: ./Same-authentication-api-v2
+  #   restart: always
+  #   environment:
+  #     FLASK_ENV: development
+  #   volumes:
+  #     - "./Same-authentication-api-v2:/app"
+  #   ports:
+  #     - "8000:5000"
 
   chat-api:
     build:
