@@ -11,6 +11,7 @@ exports.up = function (knex) {
     table.string("password").notNullable();
     table.string("user_name").unique().notNullable();
     table.boolean("is_active");
+    table.string("bio");
     table.timestamps(true, true);
   });
 };

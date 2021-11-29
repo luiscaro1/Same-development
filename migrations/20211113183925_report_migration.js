@@ -9,7 +9,7 @@ exports.up = function(knex) {
         table.boolean("harrasment");
         table.boolean("discrimination");
         table.boolean("viruses");
-        table.boolean("violationofIp");
+        table.boolean("violationofip");
         table.boolean("pretending");
       });
     };
