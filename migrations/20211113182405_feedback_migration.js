@@ -3,7 +3,7 @@
 exports.up = function(knex) {
     return knex.schema.createTable("Feedback", (table) => {
         table.uuid("fid").primary().unique().defaultTo(knex.raw('gen_random_uuid()'));
-        table.string("email").references("email").inTable("User");
+        table.string("email")
         table.string("websitedesign");
         table.integer("ratedesign").notNullable();
         table.string("websitefunctionality");
